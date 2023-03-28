@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>Happy New Year</p>
+    <textarea></textarea>
+    <button id="click">Click</button>
+</body>
+
+<script>
+    $(document).ready(function(){
+
+        function reverse(e){
+            arr = e.split(' ')
+            new_arr = []
+            for (i=0;i<arr.length;i++){
+                new_arr.push(arr.slice(0, arr.length-i).slice(-1))
+            }
+            e = new_arr.join(' ')
+            return e
+        }
+
+        function reverse_char(e){
+            new_string = []
+            for (i=0;i<e.length;i++){
+                new_string.push(e.slice(0, e.length-i).slice(-1))
+            }
+            return new_string.join('')
+        }
+
+        $('#click').click(function(){
+            $('textarea').text(reverse_char($('p').text()))
+            // $('textarea').text(reverse($('p').text()))
+        }); 
+    });
+</script>  
+</html>
