@@ -7,11 +7,17 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./count.js"></script>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
-    <input type="datetime-local" id="fTime" placeholder="blank"/>
-    <br><br>
-    <input type="datetime-local" id="lTime" placeholder="blank"/>
-    <button id="btn">Button</button>
+    <h1>Your salary of this week on <span class="date"></span> is: <span class="salary"></span>VND</h1>
+    <table>
+        <tr>
+            <td>Date</td>
+            <td>Hour</td>
+            <td>Salary</td>
+            <td>Residual Minute</td>
+        </tr>
+    </table>
 </body>
 </html>
